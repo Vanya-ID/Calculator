@@ -38,6 +38,7 @@
 .show_selected_count {
     margin-top: 12px;
     font-size: 19px;
+    font-weight: 600;
     opacity: 0;
     transition: all 1s;
     animation: show 0.5s;
@@ -47,6 +48,7 @@
 .hide_selected_count {
     margin-top: 12px;
     font-size: 19px;
+    font-weight: 600;
     opacity: 0;
     transition: all 1s;
     animation: hide 0.5s;
