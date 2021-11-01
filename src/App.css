@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+.points_container {
+    display: flex;
+
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    transition: all 1s;
+    animation: show 1s;
+    animation-fill-mode: forwards;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    transition: all 1s;
+    animation: hide 1s;
+    animation-fill-mode: forwards;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 26px;
 }
 
-.App-link {
-  color: #61dafb;
+.show_selected_count {
+    margin-top: 12px;
+    font-size: 19px;
+    opacity: 0;
+    transition: all 1s;
+    animation: show 0.5s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hide_selected_count {
+    margin-top: 12px;
+    font-size: 19px;
+    opacity: 0;
+    transition: all 1s;
+    animation: hide 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.checkBoxes_wrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 3px solid blue;
+    box-shadow: 2px 2px 4px black;
+    padding: 14px;
+    border-radius: 15px;
+}
+
+.left_arrow {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.left_arrow:hover {
+    transform: translateX(-25px) scaleX(1.5);
+}
+
+.right_arrow {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.right_arrow:hover {
+    transform: translateX(25px) scaleX(1.5)
 }
