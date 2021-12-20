@@ -1,4 +1,4 @@
-import {Checkbox, FormControlLabel, FormGroup} from "@mui/material";
+import {Box, Checkbox, FormControlLabel, FormGroup} from "@mui/material";
 import React from "react";
 import {RootStoreType} from "../store/store";
 import {useSelector} from "react-redux";
@@ -21,9 +21,12 @@ export const BlockWithData = React.memo(({currentBox, checkboxClick}: BlockWithD
             <FormGroup>
                 {data.map((el, i) =>
                     <FormControlLabel key={i}
-                                      control={<Checkbox checked={el.checked} id={el.id}
-                                                         onClick={() => checkboxClick(el.id)}/>}
-                                      label={el.title}/>
+                                      control={<Checkbox
+                                          checked={el.checked} id={el.id}
+                                          onClick={() => checkboxClick(el.id)}/>}
+                                      label={<Box component="div" fontWeight={500} fontSize={26}>
+                                          {el.title}
+                                      </Box>}/>
                 )}
             </FormGroup>
         </div>

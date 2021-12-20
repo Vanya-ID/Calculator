@@ -4,10 +4,6 @@ import {PriceBlock} from "./components/PriceBlock";
 import {useDispatch} from "react-redux";
 import {BoxNumberType, SelectService} from "./store/reducers/boxesReducer";
 import {BlockWithData} from "./components/BlockWithData";
-// @ts-ignore
-import leftArrow from './assets/leftArrow.png'
-// @ts-ignore
-import rightArrow from './assets/rightArrow.png'
 
 function App() {
     document.title = 'Калькулятор'
@@ -43,9 +39,9 @@ function App() {
     return (
         <div className={newStyle ? 'show' : 'hide'}>
             <div className={'points_container'}>
-                <img alt={'Arrow'} src={leftArrow} className={'left_arrow'} onClick={prevBlock}/>
+                <span className={'left_arrow'} onClick={prevBlock}> {'<'} </span>
                 <BlockWithData currentBox={boxToShow} checkboxClick={checkboxClick}/>
-                <img alt={'Arrow'} src={rightArrow} className={'right_arrow'} onClick={nextBlock}/>
+                <span className={'right_arrow'} onClick={nextBlock}> {'>'}</span>
             </div>
             <PriceBlock/>
         </div>

@@ -27,7 +27,12 @@ export const PriceBlock = () => {
     return (
         <div>
             <div className={'btn_wrapper'}>
-                <Button style={checkedPoints.length < 3 ? {color: 'blue', fontWeight: 'bold'} : {}}
+                <Button style={checkedPoints.length < 3 ? {
+                    color: '#346ba3',
+                    fontWeight: 'bold',
+                    transform: 'scale(1.35)',
+                    boxShadow: '2px 2px 2px black'
+                } : {transform: 'scale(1.35', boxShadow: '4px 4px 2px #897979'}}
                         disabled={checkedPoints.length < 3} onClick={buttonClick} variant="contained">
                     {
                         checkedPoints.length < 3 ? `Выбрано ${checkedPoints.length} / 3` : 'Рассчитать'
@@ -60,7 +65,7 @@ export const PriceBlock = () => {
                         Стоимость
                     </Typography>
                     <Typography id="modal-modal-description" sx={{mt: 2, fontSize: '20px'}}>
-                        {(price * 0.7).toFixed(2) + ' BYN'}
+                        {Math.round(price * 0.8) + ' BYN'}
                     </Typography>
                 </Box>
             </Modal>
