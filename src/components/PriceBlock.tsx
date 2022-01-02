@@ -61,10 +61,10 @@ export const PriceBlock = () => {
                     px: 4,
                     pb: 3,
                 }}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                    <Typography style={{marginBottom: '20px'}} id="modal-modal-title" variant="h5" component="h2">
                         Стоимость
                     </Typography>
-                    <Typography id="modal-modal-description" sx={{mt: 2, fontSize: '20px'}}>
+                    <Typography id="modal-modal-description" variant="h5" component="h2">
                         {Math.round(price * 0.8) + ' BYN'}
                     </Typography>
                 </Box>
